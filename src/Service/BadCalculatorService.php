@@ -24,4 +24,12 @@ class BadCalculatorService
         // L'opérateur @ supprime l'erreur, ce qui est une très mauvaise pratique.
         return @($numerator / $denominator);
     }
+    /**
+     * Une autre fonction mal écrite pour l'exemple.
+     */
+    public function multiply($x, $y)
+    {
+        echo "Calcul en cours..."; // Effet de bord indésirable (echo dans une classe de service)
+        return $x * $y;
+    }
 }
